@@ -1,8 +1,54 @@
+@media (max-width: 640px) {
+  .gif-group {
+    display: contents;
+  }
+
+  .cascade-gradient {
+    display: none;
+  }
+
+  .cascade-light-purple {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15vh 10px 5vh 10px;
+  }
+
+  #case-study-content > div {
+    padding: 0rem 1rem;
+  }
+}
+
 /* sm */
 @media (min-width: 640px) {
   /* Header */
   #header {
     padding: 0 1.5rem;
+  }
+
+  .gif-group {
+    display: contents;
+  }
+
+  .gif-group {
+    display: contents;
+  }
+
+  .cascade-gradient {
+    display: none;
+  }
+
+  .cascade-light-purple {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30vh 10px 15vh 10px;
+  }
+
+  #case-study-content > div {
+    padding: 0rem 1rem;
   }
 
   /* Our Team */
@@ -80,6 +126,11 @@
   #menu {
     display: none;
   }
+
+  .gif-group {
+    display: contents;
+  }
+
   /* Our Team */
   #our-team > div > div > div {
     max-width: 36rem;
