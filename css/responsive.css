@@ -146,6 +146,13 @@
     flex-direction: row;
   }
 
+  #start-here > div > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   #start-here .static-graphic-color {
     background-image: url("../images/cascade-white.png");
     background-repeat: no-repeat;

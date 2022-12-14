@@ -6,11 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./images/Risorsa 20s.png">
+  
   <link rel="stylesheet" href="css/reset.css">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
   <script src="https://kit.fontawesome.com/7233fea297.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  
   <title>Cascade</title>
 </head>
 
@@ -54,7 +56,7 @@
       <div class="cascade-gradient">
         <div class="static-graphic-color"></div>
       </div>
-      <div class="cascade-floral-white">
+      <div class="cascade-light-purple">
         <img class="cascade sm-screen" src="./images/cascade-white.png" alt="Cascade logo">
         <img class="cascade lg-screen" src="./images/cascade-text.png" alt="Cascade logo text">
         <p class="dark-text">
@@ -406,7 +408,12 @@
           Configuring the environment manually for each application is time consuming and error prone which leads to
           longer deployment cycles.
         </p>
-        <quote></quote>
+        <figure>
+          <blockquote cite="https://www.cio.com/article/247005/what-are-containers-and-why-do-you-need-them.html">
+              <p>You’re going to test using Python 2.7, and then it’s going to run on Python 3 in production and something weird will happen. Or you’ll rely on the behavior of a certain version of an SSL library and another one will be installed. You’ll run your tests on Debian and production is on Red Hat and all sorts of weird things happen.</p>
+          </blockquote>
+          <figcaption>—Solomon Hykes, <cite>Creator of Docker</cite></figcaption>
+        </figure>
         <p>
           To reliably deploy software across various platforms and expect consistent behavior, developers needed a way
           to package application code with its various dependencies. Containers are standardized packages of software
@@ -415,8 +422,8 @@
           Containerization offers multiple benefits to running applications on the cloud, allowing teams to deploy
           software efficiently and operate at previously unheard-of scales.
         </p>
-        <img class="downsize-l" data-src="images/diagrams/rest-api.png" alt="rest api"
-          src="images/diagrams/rest-api.png">
+        <img data-src="images/diagrams/benefitsOfContainers.png" alt="Benefits Of Containers"
+          src="images/diagrams/benefitsOfContainers.png">
         <p>
           Containerized applications can deploy on multiple operating systems consistently, and can scale horizontally
           when demands increase. This is because each container is a completely isolated unit, independent of other
@@ -429,8 +436,8 @@
           the deployment and management of these containers. What if a container fails in the middle of the night? How
           does that container get restarted? What if there are multiple containers? The complexity only grows.
         </p>
-        <img class="downsize-l" data-src="images/diagrams/rest-api.png" alt="rest api"
-          src="images/diagrams/rest-api.png">
+        <img data-src="images/diagrams/orchestrator.png" alt="Container Orchestrator"
+          src="images/diagrams/orchestrator.png">
         <p>
           Container orchestration manages the complexity of running containers on the cloud. It allows developers to
           deploy, scale, and secure containers with minimal effort. Container orchestration automates the various tasks
@@ -451,13 +458,15 @@
           servers and each component would be manual and tedious. Telemetry data could give context to what happened at
           the time of failure as well as what led up to it.
         </p>
+        <img data-src="images/diagrams/crash.png" alt="Adding Observability"
+          src="images/diagrams/crash.png">
         <h3 id="section-3-2">3.2 Telemetry Data</h3>
         <p>
           Logs, metrics, and traces, often referred to as the three pillars of observability, offer distinctive
           perspectives on a system's state.
         </p>
-        <img class="downsize-m" data-src="images/diagrams/three-pillars.png" alt="three pillars of observability"
-          src="images/diagrams/three-pillars.png">
+        <img data-src="images/diagrams/observability.png" alt="three pillars of observability"
+          src="images/diagrams/observability.png">
         <h4>Logs</h4>
         <p>
           Logs are immutable human-readable records of discrete events that happened over some time within an
@@ -494,6 +503,7 @@
           Among these tools, the Cloud Native Computing Foundation’s OpenTelemetry (OTel) project aims to standardize
           collecting and transmitting telemetry data3.
         </p>
+        <img data-src="images/diagrams/collectorPipeline.png" alt="Collector Pipeline" src="images/diagrams/collectorPipeline.png">
         <p>
           The data is processed through the OTel collector which is composed of three main components:
           <ul>
@@ -502,7 +512,6 @@
             <li>exporters to send data to various backends where data can be visualized and analyzed</li>
           </ul>
         </p>
-        <img class="downsize-s" data-src="images/diagrams/scale.png" alt="scale" src="images/diagrams/scale.png">
         <p>
           AWS X-Ray and AWS CloudWatch are examples of OTel-compatible backends.
         </p>
@@ -511,7 +520,7 @@
           The following section focuses on components required to deploy and manage containerized applications within
           the AWS ecosystem, beginning with what cloud components are necessary.
         </p>
-        <img class="downsize-xl" data-src="images/diagrams/options.png" alt="options" src="images/diagrams/options.png">
+        <img data-src="images/diagrams/components.png" alt="Components of Deploying Containers in the Cloud" src="images/diagrams/components.png">
         <h3 id="section-4-1">4.1 Cloud Infrastructure</h3>
         <p>
           In order to deploy a containerized application on the cloud, a cloud environment composed of individually
@@ -526,10 +535,10 @@
           policy associated with the routing table.
         </p>
         <figure>
-          <img class="downsize-xl" data-src="images/diagrams/options.png" alt="options"
-            src="images/diagrams/options.png">
+          <img data-src="images/diagrams/basicInfra.png" alt="AWS-Recommended Minimum Architecture"
+            src="images/diagrams/basicInfra.png">
           <figcaption>
-
+            As a best practice, AWS recommends having two subnets and two availability zones to provide redundancy required for high availability. In case of a failure in one, the other can still meet demand.
           </figcaption>
         </figure>
         <h3 id="section-4-2">4.2 Amazon Elastic Container Service (ECS)</h3>
@@ -546,7 +555,11 @@
           managing the EC2 instances themselves or using AWS’ serverless option.
         </p>
         <figure>
-
+          <img data-src="images/diagrams/ec2vsfargate.png" alt="ECS on EC2 vs ECS on Fargate"
+            src="images/diagrams/ec2vsfargate.png">
+            <figcaption>
+              Managed EC2 Servers vs Serverless with Fargate
+            </figcaption>
         </figure>
         <p>
           When deploying containers on ECS, there are two launch types – EC2 and Fargate – based on whether the
@@ -561,7 +574,11 @@
           and the ECS service pattern.
         </p>
         <figure>
-
+          <img class="downsize-xl" data-src="images/diagrams/sidecar.png" alt="Collector as a sidecar"
+          src="images/diagrams/sidecar.png">
+          <figcaption>
+            Sidecar Pattern
+          </figcaption>
         </figure>
         <p>
           With the sidecar pattern each application container is deployed alongside the collector container within a
@@ -570,7 +587,11 @@
           visibility, with telemetry data being collected for each particular application container.
         </p>
         <figure>
-
+          <img data-src="images/diagrams/serviceSidecar.png" alt="ECS Service Pattern"
+          src="images/diagrams/serviceSidecar.png">
+          <figcaption>
+            ECS Service Pattern
+          </figcaption>
         </figure>
         <p>
           The ECS service pattern runs the application container by itself in a task, without a sidecar, and instead the
@@ -595,7 +616,11 @@
           specific order.
         </p>
         <figure>
-
+          <img data-src="images/diagrams/management.png" alt="AWS Management Console"
+          src="images/diagrams/management.png">
+          <figcaption>
+            The AWS Management Console is composed of several services, each with their own specifications and complexities
+          </figcaption>
         </figure>
         <p>
           The problem with this method is that often there isn’t a record of exactly how the infrastructure and the
@@ -622,9 +647,8 @@
           infrastructure creation in a more consistent and repeatable way, learning, planning and implementing this
           method can be time-consuming.
         </p>
-        <figure>
-
-        </figure>
+        <img data-src="images/diagrams/IaC.png" alt="Infrastructure as Code"
+          src="images/diagrams/IaC.png">
 
         <h3 id="section-5-2">5.2 AWS Copilot</h3>
         <p>
@@ -663,7 +687,8 @@
             </li>
           </ol>
         </p>
-        <img src="" alt="">
+        <img class="downsize-xl" data-src="images/diagrams/productCompare2.png" alt="Product Comparison Table"
+          src="images/diagrams/productCompare2.png">
         <p>
           Cascade is not for everyone; Cascade was specifically built for users with containerized applications wanting
           to deploy on ECS Fargate with logging and tracing capabilities. Cascade’s approach enhances similar solutions
@@ -678,7 +703,11 @@
           observability possible.
         </p>
         <figure>
-
+          <img class="downsize-xl" data-src="images/diagrams/3Components.png" alt="Three Components of Cascade’s Architecture"
+          src="images/diagrams/3Components.png">
+          <figcaption>
+            Three Components of Cascade’s Architecture
+          </figcaption>
         </figure>
         <h3 id="section-6-1">6.1 Cascade Agent</h3>
         <p>
@@ -731,7 +760,11 @@
         </p>
 
         <figure>
-
+          <img data-src="images/diagrams/files2.jpg" alt="Cascade-created S3 Bucket’s File Structure"
+          src="images/diagrams/files2.jpg">
+          <figcaption>
+            Cascade-created S3 Bucket’s File Structure
+          </figcaption>
         </figure>
         <h3 id="section-6-3">6.3 Cascade-built Infrastructure</h3>
 
@@ -740,14 +773,16 @@
           the Cascade Backend generates. Each resource plays a distinct role, whether it is regarding networking, ECS,
           or observability.
         </p>
-        <img src="" alt="">
+        <img class="downsize-xl" data-src="images/diagrams/resources.jpg" alt="Cascade-created User Resources"
+          src="images/diagrams/resources.jpg">
         <h3 id="section-6-3-1">6.3.1 Networking Resources</h3>
         <p>
           When deciding what was needed to deploy containerized applications, our goal was to implement only the
           essential components required for getting started with the AWS cloud infrastructure. These components include
           a VPC, an internet gateway, route table, route, route table associations and public subnets.
         </p>
-        <img src="" alt="">
+        <img class="downsize-xl" data-src="images/diagrams/RoutingTable.png" alt="Routing Table"
+          src="images/diagrams/RoutingTable.png">
         <p>
           While all resources in the VPC can communicate with each other, the communication between the VPC and the
           internet and other AWS services outside the VPC is facilitated via public subnets with its associated routing
@@ -769,7 +804,8 @@
           main focus was public-facing applications, we decided that the most suitable choice was an Application Load
           Balancer (ALB) because it specifically served HTTP/HTTPs traffic for container-based applications.
         </p>
-        <img src="" alt="">
+        <img class="downsize-xl" data-src="images/diagrams/loadBalancedInfra2.png" alt="Load Balanced Web Infrastructure"
+          src="images/diagrams/loadBalancedInfra2.png">
         <h3 id="section-6-3-2">6.3.2 ECS Resources</h3>
         <p>
           Now that the networking resources that serve as the basis of the Cascade infrastructure have been planned out,
@@ -778,7 +814,11 @@
           related to the container orchestration on ECS – a task definition, service, and cluster.
         </p>
         <figure>
-
+          <img class="downsize-xl" data-src="images/diagrams/taskprocess.png" alt="Task Definition instantiating a Task"
+          src="images/diagrams/taskprocess.png">
+          <figcaption>
+            Running the task definition instantiates a task containing the containerized app.
+          </figcaption>
         </figure>
         <p>
           A task definition is a blueprint that includes each container's launch configuration, such as Docker image,
@@ -791,7 +831,11 @@
         </p>
         <h3 id="section-6-3-3">6.3.3 Observability Resources</h3>
         <figure>
-
+          <img data-src="images/diagrams/sidecar2.png" alt="ADOT Collector sidecar to user application"
+          src="images/diagrams/sidecar2.png">
+          <figcaption>
+            Each container is deployed alongside its own collector within a single task.
+          </figcaption>
         </figure>
         <p>
           Cascade uses the sidecar pattern to run an AWS Distro for OpenTelemetry (ADOT) Collector – the AWS-supported
@@ -811,7 +855,16 @@
           directly interact with the AWS console.
         </p>
         <figure>
-
+          <div class="gif-group">
+            <img class="downsize-xl" data-src="images/diagrams/welcome.gif" alt="Cascade three step process"
+            src="images/diagrams/welcome.gif">
+            <img class="downsize-xl" data-src="images/diagrams/deploying.gif" alt="Cascade Dashboard"
+            src="images/diagrams/deploying.gif">
+          </div>
+          <figcaption>
+            <p>The 3-step process to prepare containers for deployment</p> 
+            <p>Users input their application information and can deploy on the Cascade GUI.</p>
+          </figcaption>
         </figure>
         <p>
           When deploying through the GUI, all the implementation details are abstracted away; the user simply adds a few
@@ -837,7 +890,14 @@
           view Terraform config files with a click of a button.
         </p>
         <figure>
-
+          <img class="downsize-xl" data-src="images/diagrams/json-modal.gif" alt="Cascade View JSON Button"
+          src="images/diagrams/json-modal.gif">
+          <figcaption>
+            <p>View JSON on Cascade Dashboard</p> 
+            <p>
+              Users can view the generated Terraform config files directly on Cascade or visit the S3 bucket and download the files.
+            </p>
+          </figcaption>
         </figure>
         <p>
           With Cascade's GUI, the user has a clear, holistic view of containers deployed via the Cascade Dashboard.
@@ -864,7 +924,8 @@
           as S3 and ECR, were grouped into an execution role, whereas the permissions required for running containers
           after deployment were defined in a task role.
         </p>
-        <img src="" alt="">
+        <img class="downsize-xl" data-src="images/diagrams/iam.png" alt="IAM Roles"
+          src="images/diagrams/iam.png">
         <p>
           The Cascade Backend automatically creates an execution role and task role using Terraform’s CDK along with the
           other infrastructure resources to make sure each component has the proper permissions to execute correctly.
@@ -915,7 +976,8 @@
           setting up a webhook for each resource to get updates on the status as well as providing a custom endpoint for
           each user, which adds more complexity to the status data logic in our backend.
         </p>
-        <img src="" alt="">
+        <img class="downsize-xl" data-src="images/diagrams/pollingVsWebhook2.png" alt="Polling Vs Webhooks"
+          src="images/diagrams/pollingVsWebhook2.png">
         <p>
           Since our backend was already outputting logs of the creation and destruction processes with Terraform
           commands, we decided to leverage that data via Server-Sent Events (SSE) rather than relying on direct
@@ -924,7 +986,8 @@
           client as it is generated. Afterward, the client can detect the resource status by matching two keywords –
           resource name and Terraform action – to the real-time data.
         </p>
-        <img src="" alt="">
+        <img data-src="images/diagrams/sse.png" alt="Server-Sent Events"
+          src="images/diagrams/sse.png">
         <h2 id="section-8">8. Future Work</h2>
         <p>Although Cascade fulfills the need to quickly deploy containerized applications, there is always more that
           can be added to open source projects. Below are a few future work ideas that build on what Cascade currently
@@ -1016,8 +1079,11 @@
       </div>
     </div>
   </div>
-  <div id="presentation">
-    link to youtube video
+  <div id="presentation" class="main-section">
+    <div class="qmantis-floral-white">
+      <h2>Presentation</h2>
+      <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+    </div>
   </div>
   <div id="our-team" class="main-section">
     <div>
@@ -1031,26 +1097,50 @@
         </div>
         <ul class="people">
           <li class="profile">
-            <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" data-src="images/team/kathy.png" alt="profile picture of" src="images/team/kathy.png">
+            <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" data-src="" alt="profile picture of " src="">
             <div>
               <div>
-                <h3></h3>
-                <p></p>
+                <h3>Anne Tiotuico</h3>
+                <p>SF Bay Area, CA</p>
+              </div>
+
+              <ul class="social">
+                <!-- <li>
+                  <a href="mailto:" target="_blank"><i class="fas fa-envelope"></i></a>
+                </li> -->
+                <li>
+                  <a href="https://www.linkedin.com/in/annetiotuico/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </li>
+                <li>
+                  <a href="https://github.com/AnneTiotuico" target="_blank"><i class="fab fa-github"></i></a>
+                </li>
+                <!-- <li>
+                  <a href="" target="_blank"><i class="fas fa-globe"></i></a>
+                </li> -->
+              </ul>
+            </div>
+          </li>
+          <li class="profile">
+            <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" data-src="images/team/natalie.jpg" alt="profile picture of Natalie" src="images/team/natalie.jpg">
+            <div>
+              <div>
+                <h3>Natalie Thompson</h3>
+                <p>Austin, TX</p>
               </div>
 
               <ul class="social">
                 <li>
-                  <a href="mailto:" target="_blank"><i class="fas fa-envelope"></i></a>
+                  <a href="mailto:natalie.a.thompson@outlook.com" target="_blank"><i class="fas fa-envelope"></i></a>
                 </li>
                 <li>
-                  <a href="" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  <a href="https://www.linkedin.com/in/natalie-thompson-61a116110/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 </li>
                 <li>
-                  <a href="" target="_blank"><i class="fab fa-github"></i></a>
+                  <a href="https://github.com/NatalieAThompson" target="_blank"><i class="fab fa-github"></i></a>
                 </li>
-                <li>
+                <!-- <li>
                   <a href="" target="_blank"><i class="fas fa-globe"></i></a>
-                </li>
+                </li> -->
               </ul>
             </div>
           </li>
@@ -1059,23 +1149,23 @@
             <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" data-src="" alt="profile picture of " src="">
             <div>
               <div>
-                <h3></h3>
-                <p></p>
+                <h3>Rona Hsu</h3>
+                <p>Chicago, IL</p>
               </div>
 
               <ul class="social">
-                <li>
+                <!-- <li>
                   <a href="mailto:" target="_blank"><i class="fas fa-envelope"></i></a>
+                </li> -->
+                <li>
+                  <a href="https://www.linkedin.com/in/rona-h-a48640246/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 </li>
                 <li>
-                  <a href="" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  <a href="https://github.com/Macaroni2629" target="_blank"><i class="fab fa-github"></i></a>
                 </li>
-                <li>
-                  <a href="" target="_blank"><i class="fab fa-github"></i></a>
-                </li>
-                <li>
+                <!-- <li>
                   <a href="" target="_blank"><i class="fas fa-globe"></i></a>
-                </li>
+                </li> -->
               </ul>
             </div>
           </li>
@@ -1084,48 +1174,23 @@
             <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" data-src="" alt="profile picture of " src="">
             <div>
               <div>
-                <h3></h3>
-                <p></p>
+                <h3>Yueun Kim</h3>
+                <p>Denver, CO</p>
               </div>
 
               <ul class="social">
-                <li>
+                <!-- <li>
                   <a href="mailto:" target="_blank"><i class="fas fa-envelope"></i></a>
                 </li>
                 <li>
                   <a href="" target="_blank"><i class="fab fa-linkedin"></i></a>
-                </li>
+                </li> -->
                 <li>
-                  <a href="" target="_blank"><i class="fab fa-github"></i></a>
+                  <a href="https://github.com/yueunk" target="_blank"><i class="fab fa-github"></i></a>
                 </li>
-                <li>
+                <!-- <li>
                   <a href="" target="_blank"><i class="fas fa-globe"></i></a>
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="profile">
-            <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" data-src="" alt="profile picture of " src="">
-            <div>
-              <div>
-                <h3></h3>
-                <p></p>
-              </div>
-
-              <ul class="social">
-                <li>
-                  <a href="mailto:" target="_blank"><i class="fas fa-envelope"></i></a>
-                </li>
-                <li>
-                  <a href="" target="_blank"><i class="fab fa-linkedin"></i></a>
-                </li>
-                <li>
-                  <a href="" target="_blank"><i class="fab fa-github"></i></a>
-                </li>
-                <li>
-                  <a href="" target="_blank"><i class="fas fa-globe"></i></a>
-                </li>
+                </li> -->
               </ul>
             </div>
           </li>
