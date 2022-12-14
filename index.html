@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./images/Risorsa 20s.png">
-  
+
   <link rel="stylesheet" href="css/reset.css">
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
   <script src="https://kit.fontawesome.com/7233fea297.js" crossorigin="anonymous"></script>
-  
+
   <title>Cascade</title>
 </head>
 
@@ -32,10 +32,12 @@
       </nav>
       <div id="menu">
         <button type="button">
-          <svg id="mobile-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <svg id="mobile-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
-          <svg id="mobile-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <svg id="mobile-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
           </svg>
         </button>
@@ -403,14 +405,17 @@
         <h2 id="section-2">2. Containers</h2>
         <h3 id="section-2-1">2.1 Challenges of Deploying Software</h3>
         <p>
-          Applications are reliant on a specific environment in order to run. This requires multiple manual processes
-          such as installing the necessary operating system as well as the tools and dependencies of the software.
-          Configuring the environment manually for each application is time consuming and error prone which leads to
-          longer deployment cycles.
+          Applications are reliant on a specific environment in order to run properly. This requires multiple manual
+          processes such as installing the necessary operating system as well as the tools and dependencies of the
+          software. Configuring the environment manually for each application is time consuming and error prone which
+          can lead to longer deployment cycles.
         </p>
         <figure>
           <blockquote cite="https://www.cio.com/article/247005/what-are-containers-and-why-do-you-need-them.html">
-              <p>You’re going to test using Python 2.7, and then it’s going to run on Python 3 in production and something weird will happen. Or you’ll rely on the behavior of a certain version of an SSL library and another one will be installed. You’ll run your tests on Debian and production is on Red Hat and all sorts of weird things happen.</p>
+            <p>You’re going to test using Python 2.7, and then it’s going to run on Python 3 in production and something
+              weird will happen. Or you’ll rely on the behavior of a certain version of an SSL library and another one
+              will be installed. You’ll run your tests on Debian and production is on Red Hat and all sorts of weird
+              things happen.</p>
           </blockquote>
           <figcaption>—Solomon Hykes, <cite>Creator of Docker</cite></figcaption>
         </figure>
@@ -425,10 +430,10 @@
         <img data-src="images/diagrams/benefitsOfContainers.png" alt="Benefits Of Containers"
           src="images/diagrams/benefitsOfContainers.png">
         <p>
-          Containerized applications can deploy on multiple operating systems consistently, and can scale horizontally
-          when demands increase. This is because each container is a completely isolated unit, independent of other
-          containers. Additionally, since a container is an executable for the entire runtime environment, it is faster
-          to build and start thereby improving the software development life cycle.
+          Containerized applications can be deployed on multiple operating systems consistently, and can scale
+          horizontally when demands increase. This is because each container is a completely isolated unit, independent
+          of other containers. Additionally, since a container is an executable for the entire runtime environment, it
+          is faster to build and start thereby improving the software development life cycle.
         </p>
         <h3 id="section-2-2">2.2 Container Orchestration</h3>
         <p>
@@ -458,8 +463,7 @@
           servers and each component would be manual and tedious. Telemetry data could give context to what happened at
           the time of failure as well as what led up to it.
         </p>
-        <img data-src="images/diagrams/crash.png" alt="Adding Observability"
-          src="images/diagrams/crash.png">
+        <img data-src="images/diagrams/crash.png" alt="Adding Observability" src="images/diagrams/crash.png">
         <h3 id="section-3-2">3.2 Telemetry Data</h3>
         <p>
           Logs, metrics, and traces, often referred to as the three pillars of observability, offer distinctive
@@ -484,8 +488,8 @@
           easy to query and optimize for storage.
         </p>
         <p>
-          Metrics allow a user to assess the health of your system by monitoring groups of related quantifiable
-          identifiers so that you can identify which service is malfunctioning.
+          Metrics allow a user to assess the health of their system by monitoring groups of related quantifiable
+          identifiers so that they can identify which service is malfunctioning.
         </p>
         <h4>Traces</h4>
         <p>
@@ -503,7 +507,8 @@
           Among these tools, the Cloud Native Computing Foundation’s OpenTelemetry (OTel) project aims to standardize
           collecting and transmitting telemetry data3.
         </p>
-        <img data-src="images/diagrams/collectorPipeline.png" alt="Collector Pipeline" src="images/diagrams/collectorPipeline.png">
+        <img data-src="images/diagrams/collectorPipeline.png" alt="Collector Pipeline"
+          src="images/diagrams/collectorPipeline.png">
         <p>
           The data is processed through the OTel collector which is composed of three main components:
           <ul>
@@ -520,7 +525,8 @@
           The following section focuses on components required to deploy and manage containerized applications within
           the AWS ecosystem, beginning with what cloud components are necessary.
         </p>
-        <img data-src="images/diagrams/components.png" alt="Components of Deploying Containers in the Cloud" src="images/diagrams/components.png">
+        <img data-src="images/diagrams/components.png" alt="Components of Deploying Containers in the Cloud"
+          src="images/diagrams/components.png">
         <h3 id="section-4-1">4.1 Cloud Infrastructure</h3>
         <p>
           In order to deploy a containerized application on the cloud, a cloud environment composed of individually
@@ -538,7 +544,8 @@
           <img data-src="images/diagrams/basicInfra.png" alt="AWS-Recommended Minimum Architecture"
             src="images/diagrams/basicInfra.png">
           <figcaption>
-            As a best practice, AWS recommends having two subnets and two availability zones to provide redundancy required for high availability. In case of a failure in one, the other can still meet demand.
+            As a best practice, AWS recommends having two subnets and two availability zones to provide redundancy
+            required for high availability. In case of a failure in one, the other can still meet demand.
           </figcaption>
         </figure>
         <h3 id="section-4-2">4.2 Amazon Elastic Container Service (ECS)</h3>
@@ -557,9 +564,9 @@
         <figure>
           <img data-src="images/diagrams/ec2vsfargate.png" alt="ECS on EC2 vs ECS on Fargate"
             src="images/diagrams/ec2vsfargate.png">
-            <figcaption>
-              Managed EC2 Servers vs Serverless with Fargate
-            </figcaption>
+          <figcaption>
+            Managed EC2 Servers vs Serverless with Fargate
+          </figcaption>
         </figure>
         <p>
           When deploying containers on ECS, there are two launch types – EC2 and Fargate – based on whether the
@@ -575,7 +582,7 @@
         </p>
         <figure>
           <img class="downsize-xl" data-src="images/diagrams/sidecar.png" alt="Collector as a sidecar"
-          src="images/diagrams/sidecar.png">
+            src="images/diagrams/sidecar.png">
           <figcaption>
             Sidecar Pattern
           </figcaption>
@@ -588,7 +595,7 @@
         </p>
         <figure>
           <img data-src="images/diagrams/serviceSidecar.png" alt="ECS Service Pattern"
-          src="images/diagrams/serviceSidecar.png">
+            src="images/diagrams/serviceSidecar.png">
           <figcaption>
             ECS Service Pattern
           </figcaption>
@@ -617,9 +624,10 @@
         </p>
         <figure>
           <img data-src="images/diagrams/management.png" alt="AWS Management Console"
-          src="images/diagrams/management.png">
+            src="images/diagrams/management.png">
           <figcaption>
-            The AWS Management Console is composed of several services, each with their own specifications and complexities
+            The AWS Management Console is composed of several services, each with their own specifications and
+            complexities
           </figcaption>
         </figure>
         <p>
@@ -647,8 +655,7 @@
           infrastructure creation in a more consistent and repeatable way, learning, planning and implementing this
           method can be time-consuming.
         </p>
-        <img data-src="images/diagrams/IaC.png" alt="Infrastructure as Code"
-          src="images/diagrams/IaC.png">
+        <img data-src="images/diagrams/IaC.png" alt="Infrastructure as Code" src="images/diagrams/IaC.png">
 
         <h3 id="section-5-2">5.2 AWS Copilot</h3>
         <p>
@@ -703,8 +710,8 @@
           observability possible.
         </p>
         <figure>
-          <img class="downsize-xl" data-src="images/diagrams/3Components.png" alt="Three Components of Cascade’s Architecture"
-          src="images/diagrams/3Components.png">
+          <img class="downsize-xl" data-src="images/diagrams/3Components.png"
+            alt="Three Components of Cascade’s Architecture" src="images/diagrams/3Components.png">
           <figcaption>
             Three Components of Cascade’s Architecture
           </figcaption>
@@ -729,7 +736,7 @@
           First of all, the Backend creates a central storage with a Simple Storage Service (S3). An S3 bucket is
           created for each user in order to store any container information necessary to generate Terraform
           configuration files required for deployment. Because Cascade supports multi-container deployment, the details
-          for each container is organized into its own sub-directory object within the S3 bucket.
+          for each container are organized into its own sub-directory object within the S3 bucket.
         </p>
         <p>
           Secondly, Cascade uses Terraform’s CDK as its IaC tool in order to organize the infrastructure components into
@@ -761,7 +768,7 @@
 
         <figure>
           <img data-src="images/diagrams/files2.jpg" alt="Cascade-created S3 Bucket’s File Structure"
-          src="images/diagrams/files2.jpg">
+            src="images/diagrams/files2.jpg">
           <figcaption>
             Cascade-created S3 Bucket’s File Structure
           </figcaption>
@@ -804,8 +811,8 @@
           main focus was public-facing applications, we decided that the most suitable choice was an Application Load
           Balancer (ALB) because it specifically served HTTP/HTTPs traffic for container-based applications.
         </p>
-        <img class="downsize-xl" data-src="images/diagrams/loadBalancedInfra2.png" alt="Load Balanced Web Infrastructure"
-          src="images/diagrams/loadBalancedInfra2.png">
+        <img class="downsize-xl" data-src="images/diagrams/loadBalancedInfra2.png"
+          alt="Load Balanced Web Infrastructure" src="images/diagrams/loadBalancedInfra2.png">
         <h3 id="section-6-3-2">6.3.2 ECS Resources</h3>
         <p>
           Now that the networking resources that serve as the basis of the Cascade infrastructure have been planned out,
@@ -815,7 +822,7 @@
         </p>
         <figure>
           <img class="downsize-xl" data-src="images/diagrams/taskprocess.png" alt="Task Definition instantiating a Task"
-          src="images/diagrams/taskprocess.png">
+            src="images/diagrams/taskprocess.png">
           <figcaption>
             Running the task definition instantiates a task containing the containerized app.
           </figcaption>
@@ -832,7 +839,7 @@
         <h3 id="section-6-3-3">6.3.3 Observability Resources</h3>
         <figure>
           <img data-src="images/diagrams/sidecar2.png" alt="ADOT Collector sidecar to user application"
-          src="images/diagrams/sidecar2.png">
+            src="images/diagrams/sidecar2.png">
           <figcaption>
             Each container is deployed alongside its own collector within a single task.
           </figcaption>
@@ -857,12 +864,12 @@
         <figure>
           <div class="gif-group">
             <img class="downsize-xl" data-src="images/diagrams/welcome.gif" alt="Cascade three step process"
-            src="images/diagrams/welcome.gif">
+              src="images/diagrams/welcome.gif">
             <img class="downsize-xl" data-src="images/diagrams/deploying.gif" alt="Cascade Dashboard"
-            src="images/diagrams/deploying.gif">
+              src="images/diagrams/deploying.gif">
           </div>
           <figcaption>
-            <p>The 3-step process to prepare containers for deployment</p> 
+            <p>The 3-step process to prepare containers for deployment</p>
             <p>Users input their application information and can deploy on the Cascade GUI.</p>
           </figcaption>
         </figure>
@@ -882,8 +889,8 @@
         <p>
           We wanted a simple way to get user input for the infrastructure templates. When using the CLI to make
           requests, a user would have to ensure that there are no missing arguments and no syntax errors; in contrast,
-          with the GUI, it can more visually indicate these issues as well as help the user navigate through the process
-          using images and descriptions.
+          with the GUI, it’seasier to visually indicate these issues as well as help the user navigate through the
+          process using images and descriptions.
         </p>
         <p>
           Once deployed, we wanted an interface for users to be able to view logs, visit their site, view traces, or
@@ -891,11 +898,12 @@
         </p>
         <figure>
           <img class="downsize-xl" data-src="images/diagrams/json-modal.gif" alt="Cascade View JSON Button"
-          src="images/diagrams/json-modal.gif">
+            src="images/diagrams/json-modal.gif">
           <figcaption>
-            <p>View JSON on Cascade Dashboard</p> 
+            <p>View JSON on Cascade Dashboard</p>
             <p>
-              Users can view the generated Terraform config files directly on Cascade or visit the S3 bucket and download the files.
+              Users can view the generated Terraform config files directly on Cascade or visit the S3 bucket and
+              download the files.
             </p>
           </figcaption>
         </figure>
@@ -924,8 +932,7 @@
           as S3 and ECR, were grouped into an execution role, whereas the permissions required for running containers
           after deployment were defined in a task role.
         </p>
-        <img class="downsize-xl" data-src="images/diagrams/iam.png" alt="IAM Roles"
-          src="images/diagrams/iam.png">
+        <img class="downsize-xl" data-src="images/diagrams/iam.png" alt="IAM Roles" src="images/diagrams/iam.png">
         <p>
           The Cascade Backend automatically creates an execution role and task role using Terraform’s CDK along with the
           other infrastructure resources to make sure each component has the proper permissions to execute correctly.
@@ -986,8 +993,7 @@
           client as it is generated. Afterward, the client can detect the resource status by matching two keywords –
           resource name and Terraform action – to the real-time data.
         </p>
-        <img data-src="images/diagrams/sse.png" alt="Server-Sent Events"
-          src="images/diagrams/sse.png">
+        <img data-src="images/diagrams/sse.png" alt="Server-Sent Events" src="images/diagrams/sse.png">
         <h2 id="section-8">8. Future Work</h2>
         <p>Although Cascade fulfills the need to quickly deploy containerized applications, there is always more that
           can be added to open source projects. Below are a few future work ideas that build on what Cascade currently
@@ -1044,7 +1050,8 @@
           </li>
           <li>
             <p>
-              <a href="https://aws.amazon.com/premiumsupport/knowledge-center/elastic-beanstalk-api-throttling-errors/">https://aws.amazon.com/premiumsupport/knowledge-center/elastic-beanstalk-api-throttling-errors/</a>
+              <a
+                href="https://aws.amazon.com/premiumsupport/knowledge-center/elastic-beanstalk-api-throttling-errors/">https://aws.amazon.com/premiumsupport/knowledge-center/elastic-beanstalk-api-throttling-errors/</a>
             </p>
           </li>
         </ol>
@@ -1052,17 +1059,20 @@
         <ul>
           <li>
             <p>
-              <a href="https://docs.aws.amazon.com/pdfs/AmazonECS/latest/bestpracticesguide/bestpracticesguide.pdf">Amazon ECS Best Practices Guide</a>
+              <a href="https://docs.aws.amazon.com/pdfs/AmazonECS/latest/bestpracticesguide/bestpracticesguide.pdf">Amazon
+                ECS Best Practices Guide</a>
             </p>
           </li>
           <li>
             <p>
-              <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/Welcome.html">AWS Elastic Load Balancing API Reference</a>
+              <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/Welcome.html">AWS Elastic
+                Load Balancing API Reference</a>
             </p>
           </li>
           <li>
             <p>
-              <a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/index.html">AWS SDK for JavaScript Version 3 Documentation</a>
+              <a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/index.html">AWS SDK for JavaScript Version
+                3 Documentation</a>
             </p>
           </li>
           <li>
@@ -1072,7 +1082,8 @@
           </li>
           <li>
             <p>
-              <a href="https://aws-otel.github.io/docs/getting-started/collector">AWS Distro for OpenTelemetry Collector</a>
+              <a href="https://aws-otel.github.io/docs/getting-started/collector">AWS Distro for OpenTelemetry
+                Collector</a>
             </p>
           </li>
         </ul>
@@ -1082,7 +1093,9 @@
   <div id="presentation" class="main-section">
     <div class="qmantis-floral-white">
       <h2>Presentation</h2>
-      <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+      <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen=""></iframe>
     </div>
   </div>
   <div id="our-team" class="main-section">
@@ -1109,7 +1122,8 @@
                   <a href="mailto:" target="_blank"><i class="fas fa-envelope"></i></a>
                 </li> -->
                 <li>
-                  <a href="https://www.linkedin.com/in/annetiotuico/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  <a href="https://www.linkedin.com/in/annetiotuico/" target="_blank"><i
+                      class="fab fa-linkedin"></i></a>
                 </li>
                 <li>
                   <a href="https://github.com/AnneTiotuico" target="_blank"><i class="fab fa-github"></i></a>
@@ -1121,7 +1135,8 @@
             </div>
           </li>
           <li class="profile">
-            <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" data-src="images/team/natalie.jpg" alt="profile picture of Natalie" src="images/team/natalie.jpg">
+            <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" data-src="images/team/natalie.jpg"
+              alt="profile picture of Natalie" src="images/team/natalie.jpg">
             <div>
               <div>
                 <h3>Natalie Thompson</h3>
@@ -1133,7 +1148,8 @@
                   <a href="mailto:natalie.a.thompson@outlook.com" target="_blank"><i class="fas fa-envelope"></i></a>
                 </li>
                 <li>
-                  <a href="https://www.linkedin.com/in/natalie-thompson-61a116110/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  <a href="https://www.linkedin.com/in/natalie-thompson-61a116110/" target="_blank"><i
+                      class="fab fa-linkedin"></i></a>
                 </li>
                 <li>
                   <a href="https://github.com/NatalieAThompson" target="_blank"><i class="fab fa-github"></i></a>
@@ -1158,7 +1174,8 @@
                   <a href="mailto:" target="_blank"><i class="fas fa-envelope"></i></a>
                 </li> -->
                 <li>
-                  <a href="https://www.linkedin.com/in/rona-h-a48640246/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  <a href="https://www.linkedin.com/in/rona-h-a48640246/" target="_blank"><i
+                      class="fab fa-linkedin"></i></a>
                 </li>
                 <li>
                   <a href="https://github.com/Macaroni2629" target="_blank"><i class="fab fa-github"></i></a>
