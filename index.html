@@ -1,12 +1,1139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="icon" href="./images/Risorsa 20s.png">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="https://kit.fontawesome.com/7233fea297.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <title>Cascade</title>
 </head>
+
 <body>
-  
+  <header class="mobile-menu-closed">
+    <div id="header">
+      <a href="/">
+        <img src="images/Risorsa 18s.png" alt="Cascade logo">
+      </a>
+      <nav>
+        <a href="#start-here" class="selected">Start Here</a>
+        <a href="#case-study" class="">Case Study</a>
+        <a href="#presentation" class="">Presentation</a>
+        <a href="#our-team" class="">Our Team</a>
+
+        <a href="https://github.com/try-cascade" target="_blank" class="icon"><i class="fab fa-github"></i></a>
+      </nav>
+      <div id="menu">
+        <button type="button">
+          <svg id="mobile-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="mobile-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <!-- <div id="header-buffer"></div> -->
+      <div id="mobile-menu">
+        <a href="#start-here" class="">Start Here</a>
+        <a href="#case-study" class="selected">Case Study</a>
+        <a href="#presentation" class="">Presentation</a>
+        <a href="#our-team" class="">Our Team</a>
+
+        <a href="https://github.com/try-cascade" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      </div>
+    </div>
+  </header>
+  <div id="start-here" class="main-section">
+    <div class="h-full">
+      <div class="cascade-gradient">
+        <div class="static-graphic-color"></div>
+      </div>
+      <div class="cascade-floral-white">
+        <img class="cascade sm-screen" src="./images/cascade-white.png" alt="Cascade logo">
+        <img class="cascade lg-screen" src="./images/cascade-text.png" alt="Cascade logo text">
+        <p class="dark-text">
+          an open-source
+          <span class="text-blue">containerized</span>
+          application
+          <span class="text-blue">deployment</span>
+          solution
+        </p>
+      </div>
+    </div>
+  </div>
+  <aside id="toc" class="show">
+    <ul>
+      <li data-section="section-1" class="selected">
+        <a href="#section-1">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>1. Introduction</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-2">
+        <a href="#section-2">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>2. Containers</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-2" class="subitem">
+        <a href="#section-2-1">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>2.1 Challenges of Deploying Software</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-2" class="subitem">
+        <a href="#section-2-2">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>2.2 Container Orchestration</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-3">
+        <a href="#section-3">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>3. Observability</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-3" class="subitem">
+        <a href="#section-3-1">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>3.1 Observing Containerized Applications</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-3" class="subitem">
+        <a href="#section-3-2">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>3.2 Telemetry</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-3" class="subitem">
+        <a href="#section-3-3">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>3.3 Observability Tools</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-4">
+        <a href="#section-4">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>4. Deploying Containerized Applications</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-4" class="subitem">
+        <a href="#section-4-1">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>4.1 Cloud Infrastructure</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-4" class="subitem">
+        <a href="#section-4-2">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>4.2 Amazon Elastic Container Service (ECS)</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-4" class="subitem">
+        <a href="#section-4-3">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>4.3 Adding Observability</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-4" class="subitem">
+        <a href="#section-4-4">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>4.4 Deploying with AWS Management Console</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-5">
+        <a href="#section-5">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>5. Current Solutions</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-5" class="subitem">
+        <a href="#section-5-1">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>5.1 Infrastructure as Code (IaC)</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-5" class="subitem">
+        <a href="#section-5-2">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>5.2 AWS Copilot</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-5" class="subitem">
+        <a href="#section-5-3">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>5.3 Introducing Cascade</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-6">
+        <a href="#section-6">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>6. Cascade Architecture</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-6" class="subitem">
+        <a href="#section-6-1">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>6.1 Cascade Agent</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-6" class="subitem">
+        <a href="#section-6-2">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>6.2 Cascade Backend</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-6" class="subitem">
+        <a href="#section-6-3">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>6.3 Cascade-built Infrastructure</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-6" class="subitem">
+        <a href="#section-6-3-1">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>6.3.1 Networking Resources</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-6" class="subitem">
+        <a href="#section-6-3-2">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>6.3.2 ECS Resources</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-6" class="subitem">
+        <a href="#section-6-3-3">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>6.3.3 Observability Resources</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-6" class="subitem">
+        <a href="#section-6-4">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>6.4 Cascade GUI</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-7">
+        <a href="#section-7">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>7. Challenges</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-7" class="subitem">
+        <a href="#section-7-1">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>7.1 AWS IAM Roles</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-7" class="subitem">
+        <a href="#section-7-2">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>7.2 AWS Container Networking</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-7" class="subitem">
+        <a href="#section-7-3">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>7.3 Displaying AWS Resource Creation Status in Real-Time</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-8">
+        <a href="#section-8">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>8. Future Work</p>
+          </div>
+        </a>
+      </li>
+      <li data-section="section-9">
+        <a href="#section-9">
+          <div>
+            <div class="bullet">
+              <div></div>
+            </div>
+            <p>9. References</p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </aside>
+  <div id="case-study" class="main-section">
+    <div id="case-study-content">
+      <div class="prose prose-xl">
+        <h1>Case Study</h1>
+        <h2 id="section-1">1. Introduction</h2>
+        <p>
+          Cascade is an open-source deployment solution for containerized applications with built-in support for
+          observability. Cascade provides a graphical user interface (GUI) to abstract complex deployment details,
+          allowing containerized applications to run in the cloud with just a few steps. In addition, observability is
+          integrated with the core design of Cascade, helping users facilitate the process of locating system
+          breakdowns.
+        </p>
+        <p>
+          This case study describes how we designed and built Cascade, our specific tradeoffs, and some of the technical
+          challenges we encountered. We will start with a brief overview of one of the most prominent paradigms in
+          application development in the cloud today: containers.
+        </p>
+        <h2 id="section-2">2. Containers</h2>
+        <h3 id="section-2-1">2.1 Challenges of Deploying Software</h3>
+        <p>
+          Applications are reliant on a specific environment in order to run. This requires multiple manual processes
+          such as installing the necessary operating system as well as the tools and dependencies of the software.
+          Configuring the environment manually for each application is time consuming and error prone which leads to
+          longer deployment cycles.
+        </p>
+        <quote></quote>
+        <p>
+          To reliably deploy software across various platforms and expect consistent behavior, developers needed a way
+          to package application code with its various dependencies. Containers are standardized packages of software
+          that contain all of the necessary elements to reliably run an application regardless of the underlying
+          environment. This reduces errors that arise when the application isn’t compatible with a new environment.
+          Containerization offers multiple benefits to running applications on the cloud, allowing teams to deploy
+          software efficiently and operate at previously unheard-of scales.
+        </p>
+        <img class="downsize-l" data-src="images/diagrams/rest-api.png" alt="rest api"
+          src="images/diagrams/rest-api.png">
+        <p>
+          Containerized applications can deploy on multiple operating systems consistently, and can scale horizontally
+          when demands increase. This is because each container is a completely isolated unit, independent of other
+          containers. Additionally, since a container is an executable for the entire runtime environment, it is faster
+          to build and start thereby improving the software development life cycle.
+        </p>
+        <h3 id="section-2-2">2.2 Container Orchestration</h3>
+        <p>
+          Once the application is packaged into a container and ready to run on any environment, the next challenge is
+          the deployment and management of these containers. What if a container fails in the middle of the night? How
+          does that container get restarted? What if there are multiple containers? The complexity only grows.
+        </p>
+        <img class="downsize-l" data-src="images/diagrams/rest-api.png" alt="rest api"
+          src="images/diagrams/rest-api.png">
+        <p>
+          Container orchestration manages the complexity of running containers on the cloud. It allows developers to
+          deploy, scale, and secure containers with minimal effort. Container orchestration automates the various tasks
+          required in the container lifecycle including provisioning, networking, configuration, and scheduling as well
+          as allocating resources across containers. There are many container orchestration solutions, including
+          open-source Kubernetes and Amazon Elastic Container Service (ECS).
+        </p>
+        <h2 id="section-3">3. Observability</h2>
+        <h3 id="section-3-1">3.1 Observing Containerized Applications</h3>
+        <p>
+          Although a container orchestration service like ECS automatically attempts to mitigate issues when it detects
+          failures with the underlying host or containers, insight into the system is still required to allow developers
+          to determine when and where problems occur. Observability aims to answer both questions. Observability in the
+          context of containerized applications refers to aggregating data emitted from the applications as well as the
+          hardware they are hosted on into meaningful telemetry data for monitoring and troubleshooting the system’s
+          state. If failure occurs within the system, it would be difficult to pinpoint whether the issue originated
+          from the system itself or within the application code. Without observability, the process of checking the
+          servers and each component would be manual and tedious. Telemetry data could give context to what happened at
+          the time of failure as well as what led up to it.
+        </p>
+        <h3 id="section-3-2">3.2 Telemetry Data</h3>
+        <p>
+          Logs, metrics, and traces, often referred to as the three pillars of observability, offer distinctive
+          perspectives on a system's state.
+        </p>
+        <img class="downsize-m" data-src="images/diagrams/three-pillars.png" alt="three pillars of observability"
+          src="images/diagrams/three-pillars.png">
+        <h4>Logs</h4>
+        <p>
+          Logs are immutable human-readable records of discrete events that happened over some time within an
+          application. Centralized logging consists of collecting all the logs from hardware, cloud infrastructure, and
+          software into one searchable location.
+        </p>
+        <p>
+          Logging sheds light on how the system got to its current state. Logs provide context into the events produced
+          by the system, helping to identify what steps led up to failures.
+        </p>
+        <h4>Metrics</h4>
+        <p>
+          Metrics are numeric values that represent and describe the overall behavior of a service or component measured
+          over time. Because metrics are structured with features that include a timestamp, name, and value, they are
+          easy to query and optimize for storage.
+        </p>
+        <p>
+          Metrics allow a user to assess the health of your system by monitoring groups of related quantifiable
+          identifiers so that you can identify which service is malfunctioning.
+        </p>
+        <h4>Traces</h4>
+        <p>
+          Traces represent a single request’s journey through different services within the entire application. Traces
+          are composed of spans which encapsulate the start and finish timestamps of each step as well as references to
+          related spans along the way.
+        </p>
+        <p>
+          Because each trace and span is assigned a unique ID, mapping them together produces the entire lifecycle of a
+          request, helping engineers identify the exact location of problems such as increased latency.
+        </p>
+        <h3 id="section-3-3">3.3 Observability Tools</h3>
+        <p>
+          Observability tools allow for improved visibility, improved alerting, and better problem workflow management.
+          Among these tools, the Cloud Native Computing Foundation’s OpenTelemetry (OTel) project aims to standardize
+          collecting and transmitting telemetry data3.
+        </p>
+        <p>
+          The data is processed through the OTel collector which is composed of three main components:
+          <ul>
+            <li>receivers to translate the data to a specified format</li>
+            <li>processors to filter or retry data</li>
+            <li>exporters to send data to various backends where data can be visualized and analyzed</li>
+          </ul>
+        </p>
+        <img class="downsize-s" data-src="images/diagrams/scale.png" alt="scale" src="images/diagrams/scale.png">
+        <p>
+          AWS X-Ray and AWS CloudWatch are examples of OTel-compatible backends.
+        </p>
+        <h2 id="section-4">4. Deploying Containerized Applications</h2>
+        <p>
+          The following section focuses on components required to deploy and manage containerized applications within
+          the AWS ecosystem, beginning with what cloud components are necessary.
+        </p>
+        <img class="downsize-xl" data-src="images/diagrams/options.png" alt="options" src="images/diagrams/options.png">
+        <h3 id="section-4-1">4.1 Cloud Infrastructure</h3>
+        <p>
+          In order to deploy a containerized application on the cloud, a cloud environment composed of individually
+          configured networking resources is required. For AWS, one of the leading cloud providers today, the Virtual
+          Private Cloud (VPC) is a logically isolated section of the cloud, in which applications run in a controlled,
+          private, and secure manner.
+        </p>
+        <p>
+          If the VPC is an isolated section, how does incoming traffic from the internet access this private area of the
+          cloud? An internet gateway is a component responsible for allowing public access into the VPC, and a routing
+          table forwards the traffic to a specific subnet within an Availability Zone (AZ) according to the routing
+          policy associated with the routing table.
+        </p>
+        <figure>
+          <img class="downsize-xl" data-src="images/diagrams/options.png" alt="options"
+            src="images/diagrams/options.png">
+          <figcaption>
+
+          </figcaption>
+        </figure>
+        <h3 id="section-4-2">4.2 Amazon Elastic Container Service (ECS)</h3>
+        <p>
+          ECS is a fully managed container orchestration service that allows the user to deploy, manage, and scale
+          containerized applications. It can be used to run, stop, and manage containers on a cluster, which is a
+          logical grouping of tasks or services. While ECS controls and maintains workloads that run in a cluster, task
+          definitions are used to specify how the container should launch and include settings for memory and CPU
+          requirements. An ECS service can be configured to automatically run containers and replace tasks upon failure
+          to maintain the desired number of tasks.
+        </p>
+        <p>
+          Elastic Cloud Compute (EC2) is a virtual server that ECS uses to host containers. Users can choose between
+          managing the EC2 instances themselves or using AWS’ serverless option.
+        </p>
+        <figure>
+
+        </figure>
+        <p>
+          When deploying containers on ECS, there are two launch types – EC2 and Fargate – based on whether the
+          underlying infrastructure management is delegated to AWS. With the EC2 launch type, users have full control
+          over how the servers are configured and managed. It means that users need to be aware of the virtual machine
+          and how containers are distributed on those machines. Conversely, with the Fargate launch type, AWS provisions
+          and manages the servers on behalf of users, hence often referred to as “serverless”.
+        </p>
+        <h3 id="section-4-3">4.3 Adding Observability</h3>
+        <p>
+          To set up observability for containerized applications within ECS, there are two options – the sidecar pattern
+          and the ECS service pattern.
+        </p>
+        <figure>
+
+        </figure>
+        <p>
+          With the sidecar pattern each application container is deployed alongside the collector container within a
+          single task. Since the task contains both the application and collector, this pattern is easier to implement
+          because it doesn’t require extra configuration for service discovery. Running a sidecar also gives more
+          visibility, with telemetry data being collected for each particular application container.
+        </p>
+        <figure>
+
+        </figure>
+        <p>
+          The ECS service pattern runs the application container by itself in a task, without a sidecar, and instead the
+          collector container runs within a separate service within the cluster. Since this pattern decouples the
+          application from the collector, this brings down the cost of running double the containers as well as allowing
+          for independent container redeployment when there are updates to either the application or the collector.
+        </p>
+        <p>
+          Both options have their tradeoffs, but it's common practice to use sidecars to benefit from the full
+          functionality of the collector, scraping telemetry data for application-specific state.
+        </p>
+        <h3 id="section-4-4">4.4 Deploying with AWS Management Console</h3>
+        <p>
+          The AWS management console provides comprehensive tooling needed to deploy an application onto a network with
+          cloud infrastructure at varying levels of abstraction. Engineers interacting with the console are provided
+          everything they need to manage their cloud infrastructure with granular control.
+        </p>
+        <p>
+          The tradeoff is that this process can be tedious as it involves navigation through different interfaces for
+          each service, with each needing its own distinct steps for configuration and deployment. Teardown would be a
+          similar prolonged process as each resource usually has dependencies, requiring the deletion of components in a
+          specific order.
+        </p>
+        <figure>
+
+        </figure>
+        <p>
+          The problem with this method is that often there isn’t a record of exactly how the infrastructure and the
+          services within were configured, making it difficult to accurately duplicate as needed and slowing down the
+          development workflow. Manually deploying to the AWS cloud with the management console can be error-prone and
+          tedious, but automating the process would mitigate these issues.
+        </p>
+        <h2 id="section-5">5. Current Solutions</h2>
+        <h3 id="section-5-1">5.1 Infrastructure as Code (IaC)</h3>
+        <p>
+          The purpose of IaC is to enable setting up a complete infrastructure by running a script, eliminating the
+          manual effort of building an entire infrastructure piece by piece. With an IaC tool, users can automate the
+          laborious tasks of managing cloud resources, thereby improving efficiency and maintaining consistency. For
+          example, Terraform, one of the most popular IaC tools, allows users to describe the complete infrastructure
+          for a cloud provider in HashiCorp Configuration Language (HCL). Terraform converts the HCL to the Terraform
+          declarative syntax to communicate with the cloud provider for deploying and managing the resources.
+        </p>
+        <p>
+          How Terraform decides the order in which resources are created or destroyed depends on the explicit
+          dependencies specified in the HCL file with keywords such as `ref` or `dependsOn` as well as the implicit
+          dependencies that Terraform detects with its dependency tree, visible via `terraform graph` in the Terraform
+          CLI. In addition to Terraform, there are a wide variety of IaC tools including AWS CloudFormation, Azure
+          Resource Manager, Google Cloud Deployment Manager, etc. Although these tools aim to automate the process of
+          infrastructure creation in a more consistent and repeatable way, learning, planning and implementing this
+          method can be time-consuming.
+        </p>
+        <figure>
+
+        </figure>
+
+        <h3 id="section-5-2">5.2 AWS Copilot</h3>
+        <p>
+          AWS Copilot is an opinionated ECS CLI that removes the need for the user to know anything about the underlying
+          AWS network resources or container orchestration for application deployment. Instead, Copilot uses
+          CloudFormation, an AWS IaC tool, to deploy AWS cloud resources and provides those CloudFormation files for the
+          engineer to build off if they want to expand any resources.
+        </p>
+
+        <h3 id="section-5-2">5.3 Introducing Cascade</h3>
+        <p>
+          Cascade shares similarities with AWS Copilot regarding setting up a user's infrastructure but has notable
+          differences. Cascade provides an instrumentation agent (see Cascade Agent for details) and sets up logs and
+          traces by default. Cascade provides a GUI in which users can deploy their containerized application and view
+          logs and traces with a few clicks. Finally, unlike Copilot, Cascade uses Terraform as an IaC tool.
+        </p>
+        <p>
+          The following table summarizes how Cascade compares to aforementioned methods for deploying containerized
+          applications in four distinct ways:
+          <ol>
+            <li>
+              Simplicity of Setup: Like Copilot, Cascade writes scripts based on user input by using an IaC tool
+              underneath to automate deployment.
+            </li>
+            <li>
+              GUI: Similar to AWS Management Console, Cascade provides a GUI where users can plan, deploy, and destroy
+              resources.
+            </li>
+            <li>
+              Core Support for Traces: By default, Cascade-built infrastructure is equipped with a sidecar collector
+              enabled for tracing of each container, viewable on X-Ray upon deployment.
+            </li>
+            <li>
+              IaC Template Provided: Cascade uses the open-source IaC tool, Terraform, as a base, for its mature
+              documentation for the AWS provider as well as active community.
+            </li>
+          </ol>
+        </p>
+        <img src="" alt="">
+        <p>
+          Cascade is not for everyone; Cascade was specifically built for users with containerized applications wanting
+          to deploy on ECS Fargate with logging and tracing capabilities. Cascade’s approach enhances similar solutions
+          such as Copilot by providing a GUI as well as built-in observability, minimizing users’ effort in navigating
+          AWS’ comprehensive, yet arguably overwhelming console. In addition, users familiar with Terraform could
+          benefit from Cascade-generated Terraform files as a base to reduce the number of steps compared to a
+          from-scratch IaC deployment approach.
+        </p>
+        <h2 id="section-6">6. Cascade Architecture</h2>
+        <p>
+          There are three Cascade components – agent, backend, and GUI – that make deployment on ECS Fargate with
+          observability possible.
+        </p>
+        <figure>
+
+        </figure>
+        <h3 id="section-6-1">6.1 Cascade Agent</h3>
+        <p>
+          The Cascade Agent is an npm package for instrumenting users’ applications to allow distributed tracing. It is
+          compatible with AWS Distro for OpenTelemetry (ADOT), an upstream distribution of OTel, which has stable
+          support for tracing with various backend options. To save time, rather than trying to configure which
+          requirements are needed through trial and error, developers could simply install the Cascade Agent to generate
+          and export traces.
+        </p>
+        <h3 id="section-6-2">6.2 Cascade Backend</h3>
+        <p>
+          The Cascade Backend contains the logic for abstracting the plan and build process of cloud infrastructure
+          required for containerized application deployment. This means that the Backend needs to first receive and
+          organize user inputs from the GUI (discussed more in 6.4), and then use that information to prepare the stacks
+          to deploy.
+        </p>
+
+        <p>
+          First of all, the Backend creates a central storage with a Simple Storage Service (S3). An S3 bucket is
+          created for each user in order to store any container information necessary to generate Terraform
+          configuration files required for deployment. Because Cascade supports multi-container deployment, the details
+          for each container is organized into its own sub-directory object within the S3 bucket.
+        </p>
+        <p>
+          Secondly, Cascade uses Terraform’s CDK as its IaC tool in order to organize the infrastructure components into
+          reusable stacks – Environment and Service – with specific dependencies. The generated Terraform configuration
+          files are stored into the user’s S3 bucket for viewing and downloading. In order to ensure the security of
+          sensitive user data, Cascade-created S3 buckets are configured to be only accessible by the user.
+        </p>
+
+        <p>
+          Below is a visual representation of the file structure of a user. Within the root directory, objects are
+          organized into three groups by role – environment-specific objects, container-specific objects, and Terraform
+          config objects.
+          <ol>
+            <li>
+              Environment: The information pertaining to the entire infrastructure, such as a list of containers and AWS
+              credentials, is the first group of objects to be organized into the bucket.
+            </li>
+            <li>
+              Container: The container-specific data is organized into a sub-directory object named after each container
+              name; this allows each container to directly access the environment file from S3 during the deployment
+              process.
+            </li>
+            <li>
+              Terraform: Upon generation of the Terraform configuration files by the Backend, the config files are
+              organized into each stack’s sub-directory object.
+            </li>
+          </ol>
+        </p>
+
+        <figure>
+
+        </figure>
+        <h3 id="section-6-3">6.3 Cascade-built Infrastructure</h3>
+
+        <p>
+          There are resources separated into an environment stack and a service stack that make up the infrastructure
+          the Cascade Backend generates. Each resource plays a distinct role, whether it is regarding networking, ECS,
+          or observability.
+        </p>
+        <img src="" alt="">
+        <h3 id="section-6-3-1">6.3.1 Networking Resources</h3>
+        <p>
+          When deciding what was needed to deploy containerized applications, our goal was to implement only the
+          essential components required for getting started with the AWS cloud infrastructure. These components include
+          a VPC, an internet gateway, route table, route, route table associations and public subnets.
+        </p>
+        <img src="" alt="">
+        <p>
+          While all resources in the VPC can communicate with each other, the communication between the VPC and the
+          internet and other AWS services outside the VPC is facilitated via public subnets with its associated routing
+          table which contains a route to an internet gateway. A subnet is a range of IP addresses; whether it’s public
+          or private depends on its ability to send outbound traffic directly to the internet5. The second route in the
+          routing table above exemplifies the creation of a public subnet by adding a route with the destination of
+          0.0.0.0/0 and the internet gateway specified as a target.
+        </p>
+        <p>
+          To follow ECS best practices, we created two public subnets each within its own Availability Zone (AZ),
+          resulting in a total of two AZs. This provides redundancy required for high availability – having multiple AZs
+          avoids a single point of failure because tasks running in the other AZ can still fulfill the demand.
+        </p>
+        <p>
+          Once the above components are set, if the application running is open to the public, it must accept inbound
+          requests from the internet. One solution is allowing direct communication between the Internet and your public
+          subnet with a public IP address. Instead, we wanted a protective layer that sits between the internet and the
+          application container – a load balancer that opens a connection to the private IP of the container. Since our
+          main focus was public-facing applications, we decided that the most suitable choice was an Application Load
+          Balancer (ALB) because it specifically served HTTP/HTTPs traffic for container-based applications.
+        </p>
+        <img src="" alt="">
+        <h3 id="section-6-3-2">6.3.2 ECS Resources</h3>
+        <p>
+          Now that the networking resources that serve as the basis of the Cascade infrastructure have been planned out,
+          we can move onto discussing ECS-related resources that are responsible for provisioning users' containerized
+          applications and how they connect to the networking resources. There are three resources that are directly
+          related to the container orchestration on ECS – a task definition, service, and cluster.
+        </p>
+        <figure>
+
+        </figure>
+        <p>
+          A task definition is a blueprint that includes each container's launch configuration, such as Docker image,
+          port mapping, and environment file. In order to spin up the containers, an ECS service must instantiate the
+          associated task definition. An ECS service can run containers automatically and maintain the state of
+          containers by ensuring the minimum number of containers running at all times. In addition, an ECS service
+          takes an optional configuration to be placed behind a load balancer, making connecting our networking pieces
+          to the ECS resources less complex. Finally, an ECS cluster is linked to the aforementioned networking pieces
+          including VPC, so that all containers within the cluster can run on the same environment.
+        </p>
+        <h3 id="section-6-3-3">6.3.3 Observability Resources</h3>
+        <figure>
+
+        </figure>
+        <p>
+          Cascade uses the sidecar pattern to run an AWS Distro for OpenTelemetry (ADOT) Collector – the AWS-supported
+          version of the upstream OpenTelemetry collector for collecting telemetry data – alongside the main container
+          within the same task. This means that by providing the configuration logic within the task definition
+          resource, the Collector can receive traces from the application running in the main container and export them
+          to the X-Ray backend for visualization.
+        </p>
+        <p>
+          In addition, Cascade creates a log group so that logs generated by the deployed applications are organized by
+          their origin container, and grouped per ECS cluster. This enables viewing logs on AWS CloudWatch.
+        </p>
+        <h3 id="section-6-4">6.4 Cascade GUI</h3>
+        <p>
+          The Cascade GUI is the main component that users interact with, and it is where users input credentials and
+          container information. The GUI allows users to deploy or destroy AWS infrastructure, without having to
+          directly interact with the AWS console.
+        </p>
+        <figure>
+
+        </figure>
+        <p>
+          When deploying through the GUI, all the implementation details are abstracted away; the user simply adds a few
+          inputs such as their AWS credentials and container information. Since the infrastructure is already
+          preconfigured in the backend the user can deploy the environment with a click of a button. The dashboard
+          displays deployment status of all the resources and gives direct access to CloudWatch logs and X-Ray traces.
+        </p>
+        <h4>GUI vs. CLI</h4>
+        <p>
+          In line with our main goal to make the deployment process simple, we wanted to provide an intuitive GUI that
+          serves as a central place for users to prepare, deploy, view, and destroy their containerized applications. We
+          considered implementing a command line interface, however, there were some advantages to implementing a GUI
+          that better met our needs.
+        </p>
+        <p>
+          We wanted a simple way to get user input for the infrastructure templates. When using the CLI to make
+          requests, a user would have to ensure that there are no missing arguments and no syntax errors; in contrast,
+          with the GUI, it can more visually indicate these issues as well as help the user navigate through the process
+          using images and descriptions.
+        </p>
+        <p>
+          Once deployed, we wanted an interface for users to be able to view logs, visit their site, view traces, or
+          view Terraform config files with a click of a button.
+        </p>
+        <figure>
+
+        </figure>
+        <p>
+          With Cascade's GUI, the user has a clear, holistic view of containers deployed via the Cascade Dashboard.
+        </p>
+        <h2 id="section-7">7. Challenges</h2>
+        <h3 id="section-7-1">
+          7.1 AWS IAM Roles
+        </h3>
+        <p>
+          One of the first challenges we encountered was working with AWS Identity and Access Management (IAM) roles and
+          policies. IAM is a service that helps administer access to AWS resources, it manages user permissions, roles
+          and policies, allowing granular authorizations on what AWS services and resources are permitted to do.
+        </p>
+        <p>
+          By default, AWS users start with no permissions. The first step was to determine what permissions were needed
+          for the Cascade workflow. To successfully run our task definitions, we needed Elastic Container Registry (ECR)
+          permissions to pull the collector image and needed access to S3 to retrieve environment variables. Once
+          running, we needed the containers to emit telemetry data to CloudWatch and X-Ray.
+        </p>
+        <p>
+          After we identified each individual permission required, it was clear that they could be organized into two
+          groups, depending on where each permission is needed in the process of deploying the infrastructure and
+          spinning up the containers post deployment. The permissions related to deployment of the infrastructure, such
+          as S3 and ECR, were grouped into an execution role, whereas the permissions required for running containers
+          after deployment were defined in a task role.
+        </p>
+        <img src="" alt="">
+        <p>
+          The Cascade Backend automatically creates an execution role and task role using Terraform’s CDK along with the
+          other infrastructure resources to make sure each component has the proper permissions to execute correctly.
+          The task execution role grants permissions for pulling images from ECR and allows access to retrieving data
+          from the S3 bucket. Once the containers are running, the task role grants permissions to write logs to
+          CloudWatch and send traces to X-Ray. Ultimately, these two roles are what allows a seamless deployment process
+          for the user.
+        </p>
+        <h3 id="section-7-2">7.2 AWS Container Networking</h3>
+        <p>
+          Because Cascade supports containers including a public-facing service, we created an Application Load Balancer
+          (ALB) that sits inside a public subnet that communicates with a private IP of the application. In order to
+          instruct the ALB to direct traffic to a specified IP address, we created a container-specific target group.
+          Since creating the ALB and the target group doesn’t link them automatically, there needs to be a component
+          that associates the target group to the ALB to establish a proper routing from the ALB to the private IP of
+          the containerized application.
+        </p>
+        <p>
+          Initially, we considered a target group attachment, which is an AWS resource that provides the ability to
+          register containers with an ALB. However, a target group attachment requires a field for a target identifier,
+          which refers to a container identifier that is generated once the container runs. Because Cascade is designed
+          to deploy the entire infrastructure via two stacks and the containers within are only spun up by an ECS
+          service after the completion of the deployment, container ids were unavailable at the time of defining stacks.
+        </p>
+        <p>
+          To keep the simplicity of deploying all resources in one go, we chose an alternative way to associate a target
+          group with an ALB – a listener. By defining a listener with a target group Arn and an ALB Arn (Arn is an AWS
+          resource identifier), the rules regarding how an ALB routes requests to its associated targets can be
+          determined prior to deployment along with other resources.
+        </p>
+        <h3 id="section-7-3">7.3 Displaying AWS Resource Creation Status in Real-Time</h3>
+        <p>
+          Being able to visually indicate the creation, loading, and destruction phases of each AWS resource was an
+          important component of the Cascade Dashboard, which meant that we needed a way to track the status of an AWS
+          resource as it is being created or destroyed.
+        </p>
+        <p>
+          We first considered making requests to AWS via the AWS SDK at set intervals, an approach called polling.
+          However, it would not be feasible to require several requests, not only for each of the resources but also
+          repeated requests for the same resource. For a process that could take several minutes, it was highly
+          resource-intensive for the server. In addition, there was a rate-limiting issue; API calls to AWS services
+          can’t exceed the maximum allowed rate per second, which is shared across all resources per account within a
+          region6.
+        </p>
+        <p>
+          Rather than having Cascade making requests until a change is reflected, why not have AWS send us a message
+          when that resource is created by setting up a webhook? The challenge with this approach is that it requires
+          setting up a webhook for each resource to get updates on the status as well as providing a custom endpoint for
+          each user, which adds more complexity to the status data logic in our backend.
+        </p>
+        <img src="" alt="">
+        <p>
+          Since our backend was already outputting logs of the creation and destruction processes with Terraform
+          commands, we decided to leverage that data via Server-Sent Events (SSE) rather than relying on direct
+          communication with AWS. By opening a connection between the server and the client that persists during the
+          build or teardown process via an EventSource instance, we could have the server send the text data to the
+          client as it is generated. Afterward, the client can detect the resource status by matching two keywords –
+          resource name and Terraform action – to the real-time data.
+        </p>
+        <img src="" alt="">
+        <h2 id="section-8">8. Future Work</h2>
+        <p>Although Cascade fulfills the need to quickly deploy containerized applications, there is always more that
+          can be added to open source projects. Below are a few future work ideas that build on what Cascade currently
+          offers.</p>
+        <h3>Support for Existing Resources</h3>
+        <p>
+          Currently, Cascade creates a new VPC and subnets when a user first deploys their infrastructure using our GUI.
+          In the future, we would like to add functionality to support the user’s already existing VPC and subnets.
+        </p>
+        <h3>Support for Redeployment</h3>
+        <p>
+          Currently, users can only view and download the Terraform config files generated by Cascade. Adding support
+          for uploading a Terraform config file and having our backend build that file in addition to our current setup
+          would allow users to redeploy stacks that reflect their custom configurations.
+        </p>
+        <h3>GUI Improvement</h3>
+        <p>
+          While Cascade GUI currently provides a list of resources for each stack in the order of creation, it lacks a
+          visual representation of the infrastructure. We plan to provide an interactive infrastructure map on the
+          Cascade Dashboard to help users understand the relationships between resources that make up the infrastructure
+          as well as access each resource’s AWS console via clickable components on the map.
+        </p>
+        <h2 id="section-9">9. References</h2>
+        <h3>Footnotes</h3>
+        <ol>
+          <li>
+            <p>
+              <a
+                href="https://cloud.google.com/learn/what-are-containers">https://cloud.google.com/learn/what-are-containers</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a
+                href="https://codersociety.com/blog/articles/metrics-tracing-logging">https://codersociety.com/blog/articles/metrics-tracing-logging</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="https://www.cncf.io/projects/opentelemetry/">https://www.cncf.io/projects/opentelemetry/</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a
+                href="https://aws.amazon.com/blogs/architecture/one-to-many-evolving-vpc-design/">https://aws.amazon.com/blogs/architecture/one-to-many-evolving-vpc-design/</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a
+                href="https://docs.aws.amazon.com/vpc/latest/userguide/route-table-options.html#route-tables-internet-gateway">https://docs.aws.amazon.com/vpc/latest/userguide/route-table-options.html#route-tables-internet-gateway</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="https://aws.amazon.com/premiumsupport/knowledge-center/elastic-beanstalk-api-throttling-errors/">https://aws.amazon.com/premiumsupport/knowledge-center/elastic-beanstalk-api-throttling-errors/</a>
+            </p>
+          </li>
+        </ol>
+        <h3>General Resources</h3>
+        <ul>
+          <li>
+            <p>
+              <a href="https://docs.aws.amazon.com/pdfs/AmazonECS/latest/bestpracticesguide/bestpracticesguide.pdf">Amazon ECS Best Practices Guide</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/Welcome.html">AWS Elastic Load Balancing API Reference</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/index.html">AWS SDK for JavaScript Version 3 Documentation</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="https://developer.hashicorp.com/terraform/cdktf">CDK for Terraform Documentation</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="https://aws-otel.github.io/docs/getting-started/collector">AWS Distro for OpenTelemetry Collector</a>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="presentation">
+    link to youtube video
+  </div>
+  <div id="our-team" class="main-section">
+    <div>
+      <div>
+        <div>
+          <h2>Meet Our Team</h2>
+          <p class="text-xl text-gray-300">
+            We are currently looking for opportunities. If you liked what you
+            saw and want to talk more, please reach out!
+          </p>
+        </div>
+        <ul class="people">
+          <li class="profile">
+            <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" data-src="images/team/kathy.png" alt="profile picture of" src="images/team/kathy.png">
+            <div>
+              <div>
+                <h3></h3>
+                <p></p>
+              </div>
+
+              <ul class="social">
+                <li>
+                  <a href="mailto:" target="_blank"><i class="fas fa-envelope"></i></a>
+                </li>
+                <li>
+                  <a href="" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </li>
+                <li>
+                  <a href="" target="_blank"><i class="fab fa-github"></i></a>
+                </li>
+                <li>
+                  <a href="" target="_blank"><i class="fas fa-globe"></i></a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="profile">
+            <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" data-src="" alt="profile picture of " src="">
+            <div>
+              <div>
+                <h3></h3>
+                <p></p>
+              </div>
+
+              <ul class="social">
+                <li>
+                  <a href="mailto:" target="_blank"><i class="fas fa-envelope"></i></a>
+                </li>
+                <li>
+                  <a href="" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </li>
+                <li>
+                  <a href="" target="_blank"><i class="fab fa-github"></i></a>
+                </li>
+                <li>
+                  <a href="" target="_blank"><i class="fas fa-globe"></i></a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="profile">
+            <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" data-src="" alt="profile picture of " src="">
+            <div>
+              <div>
+                <h3></h3>
+                <p></p>
+              </div>
+
+              <ul class="social">
+                <li>
+                  <a href="mailto:" target="_blank"><i class="fas fa-envelope"></i></a>
+                </li>
+                <li>
+                  <a href="" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </li>
+                <li>
+                  <a href="" target="_blank"><i class="fab fa-github"></i></a>
+                </li>
+                <li>
+                  <a href="" target="_blank"><i class="fas fa-globe"></i></a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="profile">
+            <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" data-src="" alt="profile picture of " src="">
+            <div>
+              <div>
+                <h3></h3>
+                <p></p>
+              </div>
+
+              <ul class="social">
+                <li>
+                  <a href="mailto:" target="_blank"><i class="fas fa-envelope"></i></a>
+                </li>
+                <li>
+                  <a href="" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </li>
+                <li>
+                  <a href="" target="_blank"><i class="fab fa-github"></i></a>
+                </li>
+                <li>
+                  <a href="" target="_blank"><i class="fas fa-globe"></i></a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="./javascripts/script.js"></script>
 </body>
+
 </html>
