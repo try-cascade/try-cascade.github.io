@@ -425,7 +425,8 @@
           that contain all of the necessary elements to reliably run an application regardless of the underlying
           environment. This reduces errors that arise when the application isn’t compatible with a new environment.
           Containerization offers multiple benefits to running applications on the cloud, allowing teams to deploy
-          software efficiently and operate at previously unheard-of scales.
+          software efficiently and operate at previously unheard-of scales<sup>1</sup>.
+          
         </p>
         <img data-src="images/diagrams/benefitsOfContainers.png" alt="Benefits Of Containers"
           src="images/diagrams/benefitsOfContainers.png">
@@ -475,7 +476,7 @@
         <p>
           Logs are immutable human-readable records of discrete events that happened over some time within an
           application. Centralized logging consists of collecting all the logs from hardware, cloud infrastructure, and
-          software into one searchable location.
+          software into one searchable location<sup>2</sup>.
         </p>
         <p>
           Logging sheds light on how the system got to its current state. Logs provide context into the events produced
@@ -485,7 +486,7 @@
         <p>
           Metrics are numeric values that represent and describe the overall behavior of a service or component measured
           over time. Because metrics are structured with features that include a timestamp, name, and value, they are
-          easy to query and optimize for storage.
+          easy to query and optimize for storage<sup>2</sup>.
         </p>
         <p>
           Metrics allow a user to assess the health of their system by monitoring groups of related quantifiable
@@ -499,22 +500,22 @@
         </p>
         <p>
           Because each trace and span is assigned a unique ID, mapping them together produces the entire lifecycle of a
-          request, helping engineers identify the exact location of problems such as increased latency.
+          request, helping engineers identify the exact location of problems such as increased latency<sup>2</sup>.
         </p>
         <h3 id="section-3-3">3.3 Observability Tools</h3>
         <p>
           Observability tools allow for improved visibility, improved alerting, and better problem workflow management.
           Among these tools, the Cloud Native Computing Foundation’s OpenTelemetry (OTel) project aims to standardize
-          collecting and transmitting telemetry data3.
+          collecting and transmitting telemetry data<sup>3</sup>.
         </p>
         <img data-src="images/diagrams/collectorPipeline.png" alt="Collector Pipeline"
           src="images/diagrams/collectorPipeline.png">
         <p>
           The data is processed through the OTel collector which is composed of three main components:
           <ul>
-            <li>receivers to translate the data to a specified format</li>
-            <li>processors to filter or retry data</li>
-            <li>exporters to send data to various backends where data can be visualized and analyzed</li>
+            <li><b>receivers</b> to translate the data to a specified format</li>
+            <li><b>processors</b> to filter or retry data</li>
+            <li><b>exporters</b> to send data to various backends where data can be visualized and analyzed</li>
           </ul>
         </p>
         <p>
@@ -538,7 +539,7 @@
           If the VPC is an isolated section, how does incoming traffic from the internet access this private area of the
           cloud? An internet gateway is a component responsible for allowing public access into the VPC, and a routing
           table forwards the traffic to a specific subnet within an Availability Zone (AZ) according to the routing
-          policy associated with the routing table.
+          policy associated with the routing table<sup>4</sup>.
         </p>
         <figure>
           <img data-src="images/diagrams/basicInfra.png" alt="AWS-Recommended Minimum Architecture"
@@ -627,7 +628,7 @@
             src="images/diagrams/management.png">
           <figcaption>
             The AWS Management Console is composed of several services, each with their own specifications and
-            complexities
+            complexities.
           </figcaption>
         </figure>
         <p>
@@ -665,7 +666,7 @@
           engineer to build off if they want to expand any resources.
         </p>
 
-        <h3 id="section-5-2">5.3 Introducing Cascade</h3>
+        <h3 id="section-5-3">5.3 Introducing Cascade</h3>
         <p>
           Cascade shares similarities with AWS Copilot regarding setting up a user's infrastructure but has notable
           differences. Cascade provides an instrumentation agent (see Cascade Agent for details) and sets up logs and
@@ -677,19 +678,19 @@
           applications in four distinct ways:
           <ol>
             <li>
-              Simplicity of Setup: Like Copilot, Cascade writes scripts based on user input by using an IaC tool
+              <b>Simplicity of Setup:</b> Like Copilot, Cascade writes scripts based on user input by using an IaC tool
               underneath to automate deployment.
             </li>
             <li>
-              GUI: Similar to AWS Management Console, Cascade provides a GUI where users can plan, deploy, and destroy
+              <b>GUI:</b> Similar to AWS Management Console, Cascade provides a GUI where users can plan, deploy, and destroy
               resources.
             </li>
             <li>
-              Core Support for Traces: By default, Cascade-built infrastructure is equipped with a sidecar collector
+              <b>Core Support for Traces:</b> By default, Cascade-built infrastructure is equipped with a sidecar collector
               enabled for tracing of each container, viewable on X-Ray upon deployment.
             </li>
             <li>
-              IaC Template Provided: Cascade uses the open-source IaC tool, Terraform, as a base, for its mature
+              <b>IaC Template Provided:</b> Cascade uses the open-source IaC tool, Terraform, as a base, for its mature
               documentation for the AWS provider as well as active community.
             </li>
           </ol>
@@ -751,16 +752,16 @@
           config objects.
           <ol>
             <li>
-              Environment: The information pertaining to the entire infrastructure, such as a list of containers and AWS
+              <b>Environment:</b> The information pertaining to the entire infrastructure, such as a list of containers and AWS
               credentials, is the first group of objects to be organized into the bucket.
             </li>
             <li>
-              Container: The container-specific data is organized into a sub-directory object named after each container
+              <b>Container:</b> The container-specific data is organized into a sub-directory object named after each container
               name; this allows each container to directly access the environment file from S3 during the deployment
               process.
             </li>
             <li>
-              Terraform: Upon generation of the Terraform configuration files by the Backend, the config files are
+              <b>Terraform:</b> Upon generation of the Terraform configuration files by the Backend, the config files are
               organized into each stack’s sub-directory object.
             </li>
           </ol>
@@ -794,7 +795,7 @@
           While all resources in the VPC can communicate with each other, the communication between the VPC and the
           internet and other AWS services outside the VPC is facilitated via public subnets with its associated routing
           table which contains a route to an internet gateway. A subnet is a range of IP addresses; whether it’s public
-          or private depends on its ability to send outbound traffic directly to the internet5. The second route in the
+          or private depends on its ability to send outbound traffic directly to the internet<sup>5</sup>. The second route in the
           routing table above exemplifies the creation of a public subnet by adding a route with the destination of
           0.0.0.0/0 and the internet gateway specified as a target.
         </p>
@@ -866,11 +867,11 @@
             <img class="downsize-xl" data-src="images/diagrams/welcome.gif" alt="Cascade three step process"
               src="images/diagrams/welcome.gif">
             <img class="downsize-xl" data-src="images/diagrams/deploying.gif" alt="Cascade Dashboard"
-              src="images/diagrams/deploying.gif">
+            src="images/diagrams/deploying.gif">
           </div>
           <figcaption>
-            <p>The 3-step process to prepare containers for deployment</p>
-            <p>Users input their application information and can deploy on the Cascade GUI.</p>
+            The 3-step process to prepare containers for deployment.<br>
+            Once users input their application information they can deploy on the Cascade GUI.
           </figcaption>
         </figure>
         <p>
@@ -889,7 +890,7 @@
         <p>
           We wanted a simple way to get user input for the infrastructure templates. When using the CLI to make
           requests, a user would have to ensure that there are no missing arguments and no syntax errors; in contrast,
-          with the GUI, it’seasier to visually indicate these issues as well as help the user navigate through the
+          with the GUI, it’s easier to visually indicate these issues as well as help the user navigate through the
           process using images and descriptions.
         </p>
         <p>
@@ -900,11 +901,8 @@
           <img class="downsize-xl" data-src="images/diagrams/json-modal.gif" alt="Cascade View JSON Button"
             src="images/diagrams/json-modal.gif">
           <figcaption>
-            <p>View JSON on Cascade Dashboard</p>
-            <p>
-              Users can view the generated Terraform config files directly on Cascade or visit the S3 bucket and
-              download the files.
-            </p>
+            Users can view the generated Terraform config files directly on Cascade or visit the S3 bucket and
+            download the files.
           </figcaption>
         </figure>
         <p>
@@ -975,7 +973,7 @@
           repeated requests for the same resource. For a process that could take several minutes, it was highly
           resource-intensive for the server. In addition, there was a rate-limiting issue; API calls to AWS services
           can’t exceed the maximum allowed rate per second, which is shared across all resources per account within a
-          region6.
+          region<sup>6</sup>.
         </p>
         <p>
           Rather than having Cascade making requests until a change is reflected, why not have AWS send us a message

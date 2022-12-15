@@ -392,8 +392,11 @@ aside::-webkit-scrollbar {
 }
 
 .prose figcaption {
-  color: var(--cascade-dark-purple);
+  color: #091e99a6;
   text-align: center;
+  font-style: italic;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 .prose blockquote ~ figcaption {
