@@ -128,7 +128,12 @@
   }
 
   .gif-group {
-    display: contents;
+    display: flex;
+    align-items: center;
+  }
+
+  .gif-group img {
+    width: 50% !important;
   }
 
   /* Our Team */
