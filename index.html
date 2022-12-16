@@ -332,7 +332,7 @@
           that contain all of the necessary elements to reliably run an application regardless of the underlying
           environment. This reduces errors that arise when the application isn’t compatible with a new environment.
           Containerization offers multiple benefits to running applications on the cloud, allowing teams to deploy
-          software efficiently and operate at previously unheard-of scales<sup>1</sup>.
+          software efficiently and operate at previously unheard-of scales <a href="#section-9"><sup>1</sup></a>.
           
         </p>
         <img data-src="images/diagrams/benefitsOfContainers.png" alt="Benefits Of Containers"
@@ -383,7 +383,7 @@
         <p>
           Logs are immutable human-readable records of discrete events that happened over some time within an
           application. Centralized logging consists of collecting all the logs from hardware, cloud infrastructure, and
-          software into one searchable location<sup>2</sup>.
+          software into one searchable location<a href="#section-9"><sup>2</sup></a>.
         </p>
         <p>
           Logging sheds light on how the system got to its current state. Logs provide context into the events produced
@@ -393,7 +393,7 @@
         <p>
           Metrics are numeric values that represent and describe the overall behavior of a service or component measured
           over time. Because metrics are structured with features that include a timestamp, name, and value, they are
-          easy to query and optimize for storage<sup>2</sup>.
+          easy to query and optimize for storage<a href="#section-9"><sup>2</sup></a>.
         </p>
         <p>
           Metrics allow a user to assess the health of their system by monitoring groups of related quantifiable
@@ -407,13 +407,13 @@
         </p>
         <p>
           Because each trace and span is assigned a unique ID, mapping them together produces the entire lifecycle of a
-          request, helping engineers identify the exact location of problems such as increased latency<sup>2</sup>.
+          request, helping engineers identify the exact location of problems such as increased latency<a href="#section-9"><sup>2</sup></a>.
         </p>
         <h3 id="section-3-3">3.3 Observability Tools</h3>
         <p>
           Observability tools allow for improved visibility, improved alerting, and better problem workflow management.
           Among these tools, the Cloud Native Computing Foundation’s OpenTelemetry (OTel) project aims to standardize
-          collecting and transmitting telemetry data<sup>3</sup>.
+          collecting and transmitting telemetry data<a href="#section-9"><sup>3</sup></a>.
         </p>
         <img data-src="images/diagrams/collectorPipeline.png" alt="Collector Pipeline"
           src="images/diagrams/collectorPipeline.png">
@@ -446,7 +446,7 @@
           If the VPC is an isolated section, how does incoming traffic from the internet access this private area of the
           cloud? An internet gateway is a component responsible for allowing public access into the VPC, and a routing
           table forwards the traffic to a specific subnet within an Availability Zone (AZ) according to the routing
-          policy associated with the routing table<sup>4</sup>.
+          policy associated with the routing table<a href="#section-9"><sup>4</sup></a>.
         </p>
         <figure>
           <img data-src="images/diagrams/basicInfra.png" alt="AWS-Recommended Minimum Architecture"
@@ -702,7 +702,7 @@
           While all resources in the VPC can communicate with each other, the communication between the VPC and the
           internet and other AWS services outside the VPC is facilitated via public subnets with its associated routing
           table which contains a route to an internet gateway. A subnet is a range of IP addresses; whether it’s public
-          or private depends on its ability to send outbound traffic directly to the internet<sup>5</sup>. The second route in the
+          or private depends on its ability to send outbound traffic directly to the internet<a href="#section-9"><sup>5</sup></a>. The second route in the
           routing table above exemplifies the creation of a public subnet by adding a route with the destination of
           0.0.0.0/0 and the internet gateway specified as a target.
         </p>
@@ -880,7 +880,7 @@
           repeated requests for the same resource. For a process that could take several minutes, it was highly
           resource-intensive for the server. In addition, there was a rate-limiting issue; API calls to AWS services
           can’t exceed the maximum allowed rate per second, which is shared across all resources per account within a
-          region<sup>6</sup>.
+          region<a href="#section-9"><sup>6</sup></a>.
         </p>
         <p>
           Rather than having Cascade making requests until a change is reflected, why not have AWS send us a message
