@@ -1,5 +1,3 @@
-console.log("hey")
-
 // Elements
 const navLinks = document.querySelectorAll("#header nav a");
 const navLinksCount = navLinks.length;
@@ -106,8 +104,13 @@ const handleTocSelection = () => {
   const clearSelectedToc = () => {
     const selectedTocItems = document.querySelectorAll("#toc .selected");
     const subItems = document.querySelectorAll(`li.subitem.show`);
+    const subsubItems = document.querySelectorAll(`li.subsubitem.show`);
 
     subItems.forEach((subItem) => {
+      subItem.classList.remove("show");
+    });
+
+    subsubItems.forEach((subItem) => {
       subItem.classList.remove("show");
     });
 
@@ -118,14 +121,26 @@ const handleTocSelection = () => {
 
   const selectTocItem = (link) => {
     const tocItem = link.closest("li");
+    const tocItemSibling = tocItem.nextElementSibling;
     const dataSection = tocItem.dataset.section;
     const subItems = document.querySelectorAll(
       `li.subitem[data-section="${dataSection}"]`
     );
 
+    const subsubItems = document.querySelectorAll(
+      `li.subsubitem[data-section="${dataSection}"]`
+    );
+
     subItems.forEach((subItem) => {
       subItem.classList.add("show");
     });
+
+    if ([...tocItemSibling.classList].includes("subsubitem")
+        || [...tocItem.classList].includes("subsubitem")) {
+      subsubItems.forEach((subItem) => {
+        subItem.classList.add("show");
+      });
+    }
 
     tocItem.classList.add("selected");
   };

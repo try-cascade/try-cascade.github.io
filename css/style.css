@@ -290,6 +290,15 @@ aside::-webkit-scrollbar {
   margin-left: 1.625rem;
 }
 
+#toc .subsubitem {
+  display: none;
+  margin-left: 2.5rem;
+}
+
+#toc .subsubitem.show {
+  display: block;
+}
+
 #toc .subitem.show {
   display: block;
 }
