@@ -3,6 +3,11 @@
     display: contents;
   }
 
+  .gif-group img {
+    padding: 10px 0;
+    margin: 0;
+  }
+
   .cascade-gradient {
     display: none;
   }
@@ -33,6 +38,11 @@
 
   .gif-group {
     display: contents;
+  }
+
+  .gif-group img {
+    padding: 10px 0;
+    margin: 0;
   }
 
   .cascade-gradient {
@@ -133,6 +143,8 @@
   }
 
   .gif-group img {
+    padding: 0 10px;
+    margin: 0;
     width: 50% !important;
   }
 
